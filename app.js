@@ -1,9 +1,10 @@
 const express = require("express");
-
+const db = require("./db")
 const app = express();
 
+app.use(express.json())
 app.get("/", (req, res) => {
-    res.send("Hello from my Node.js project!");
+    res.send("server is running");
 });
 
 app.listen(3000, () => {
